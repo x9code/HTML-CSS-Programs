@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type = "number" id = "num" placeholder = "Input number">
+        <button onclick="reveno()">Reverse</button>
+        <button onclick="perfectno()">Perfect</button>
+        <button onclick="checkPrime()">Prime</button>
+        <button onclick="evenOdd()">Even/Odd</button>
+    <script>
+        function reveno(){
+            let num = document.getElementById("num").value;
+            let reversed = num.split('').reverse().join('');
+            document.getElementById("result").innerHTML = "Reversed: " + reversed;
+        }
+    </script>
+</body>
+</html>

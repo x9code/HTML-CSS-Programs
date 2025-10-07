@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Number Operations</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <br><br>
+
+    <button onclick="reveno()">Reverse</button>
+    <button onclick="perfectno()">Perfect</button>
+    <button onclick="checkPrime()">Prime</button>
+    <button onclick="evenOdd()">Even/Odd</button>
+
+    <p id="result"></p>
+
+    <script>
+        function reveno() {
+            let num = document.getElementById("numberInput").value;
+            let reversed = num.split('').reverse().join('');
+            document.getElementById("result").innerHTML = "Reversed: " + reversed;
+        }
+        function perfectno() {
+            let num = parseInt(document.getElementById("numberInput").value);
+            let sum = 0;
+            for (let i = 1; i < num; i++) {
+                if (num % i === 0) sum += i;
+            }
+            if (sum === num && num !== 0) {
+                document.getElementById("result").innerHTML = num + " is a Perfect Number";
+            } else {
+                document.getElementById("result").innerHTML = num + " is not a Perfect Number";
+            }
+        }
+        function checkPrime() {
+            let num = parseInt(document.getElementById("numberInput").value);
+            if (num < 2) {
+                document.getElementById("result").innerHTML = num + " is not a Prime Number";
+                return;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    document.getElementById("result").innerHTML = num + " is not a Prime Number";
+                    return;
+                }
+            }
+            document.getElementById("result").innerHTML = num + " is a Prime Number";
+        }
+        function evenOdd() {
+            let num = parseInt(document.getElementById("numberInput").value);
+            if (num % 2 === 0) {
+                document.getElementById("result").innerHTML = num + " is an Even Number";
+            } else {
+                document.getElementById("result").innerHTML = num + " is an Odd Number";
+            }
+        }
+    </script>
+
+</body>
+</html>

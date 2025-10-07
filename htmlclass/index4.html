@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Display Numbers</title>
+</head>
+<body>
+    <h3>Enter a number:</h3>
+    <input type="number" id="numberInput">
+    <button onclick="addNumber()">Add Number</button>
+    <button onclick="displayResults()">Display Numbers, Sum, and Average</button>
+
+    <p id="output"></p>
+
+    <script>
+        let numbers = [];
+        let sum = 0;
+
+        // Function to add number to array
+        function addNumber() {
+            let num = parseFloat(document.getElementById('numberInput').value);
+            if (!isNaN(num)) {
+                numbers.push(num);
+                sum += num;
+                document.getElementById('numberInput').value = ''; // Clear input after adding
+                alert("Number " + num + " added to array.");
+            } else {
+                alert("Please enter a valid number.");
+            }
+        }
+
+        // Function to display numbers, sum, and average
+        function displayResults() {
+            if (numbers.length === 0) {
+                document.getElementById('output').innerHTML = "No numbers added.";
+                return;
+            }
+
+            let average = sum / numbers.length;
+
+            document.getElementById('output').innerHTML = 
+                "Numbers: " + numbers.join(', ') + "<br>" +
+                "Sum: " + sum + "<br>" +
+                "Average: " + average.toFixed(2);
+        }
+    </script>
+</body>
+</html>

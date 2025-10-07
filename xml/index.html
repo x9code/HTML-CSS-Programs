@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students Information</title>
+</head>
+<body>
+    <script type="text/javascript">
+        if (window.ActiveXObject || "ActiveXObject" in window) { // IE
+            var xml = new ActiveXObject("Msxml2.DOMDocument.6.0");
+            xml.async = false;
+            xml.load("students.xml");
+            var xsl = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
+            xsl.async = false;
+            xsl.load("students.xslt");
+            var ex = xml.transformNode(xsl);
+            document.write(ex);
+        } else if (document.implementation && document.implementation.createDocument) { 
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "students.xml", false);
+            xhr.send(null);
+            var xml = xhr.responseXML;
+
+            xhr.open("GET", "students.xslt", false);
+            xhr.send(null);
+            var xsl = xhr.responseXML;
+
+            var xsltProcessor = new XSLTProcessor();
+            xsltProcessor.importStylesheet(xsl);
+            var resultDocument = xsltProcessor.transformToFragment(xml, document);
+            document.body.appendChild(resultDocument);
+        } else {
+            alert("Your browser does not support XSLT processing.");
+        }
+    </script>
+</body>
+</html>

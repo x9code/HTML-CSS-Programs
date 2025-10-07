@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uncopyable Text</title>
+  <style>
+    /* Disable text selection */
+    p {
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+    }
+  </style>
+  <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable F12 (developer tools) and Ctrl+Shift+I
+    document.onkeydown = function(e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        e.preventDefault();
+        return false;
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>This paragraph cannot be easily copied or inspected.</p>
+</body>
+</html>

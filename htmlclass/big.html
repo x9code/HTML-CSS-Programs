@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [5,7,9,8,5,4];
+        let max = a[0];
+        let min = a[0];
+        for(let i = 0; i<6;i++){
+            if(a[i]>max){
+                max = a[i];
+            }
+            if(a[i]<min){
+                min = a[i];
+            }
+        }
+        let secBig = a[0];
+        let secMin = a[0];
+        for(let i = 0; i<6;i++){
+            if(a[i]>secBig && a[i] != max){
+                secBig = a[i];
+            }
+            if(a[i]<secMin && a[i] != min){
+                secMin = a[i];
+            }
+
+        }
+        document.write(a+"<br>");
+        document.write("max number"+max+"<br>");
+        document.write("min number"+min+"<br>");
+        document.write("second big number"+secBig+"<br>");
+        document.write("second min number"+secMin+"<br>");
+    </script>
+</body>
+</html>

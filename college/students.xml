@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="students.css"?>
+
+<students>
+    <student>
+        <usn>5BG19CS001</usn>
+        <name>Rahul Das</name>
+        <college>Biju Pattanaik University of Technology</college>
+        <branch>Computer Science</branch>
+        <yearOfJoining>2023</yearOfJoining>
+        <email>rahul.sharma@gmail.com</email>
+    </student>
+    <student>
+        <usn>2305292045</usn>
+        <name>Deepak Rana</name>
+        <college>Gandhi Engineering College</college>
+        <branch>MCA</branch>
+        <yearOfJoining>2023</yearOfJoining>
+        <email>deepak.rana@yahoo.com</email>
+    </student>
+    <student>
+        <usn>7BG19EC003</usn>
+        <name>Amit Patnaik</name>
+        <college>LMN School of Engineering</college>
+        <branch>Electronics and Communication</branch>
+        <yearOfJoining>2023</yearOfJoining>
+        <email>amit.patnaik@gmail.com</email>
+    </student>
+</students>

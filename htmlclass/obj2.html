@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Movie(name, hero, director){
+            this.name = name;
+            this.hero = hero;
+            this.director = director;
+        }
+        var movies = [new Movie("a","b","c"), 
+                     new Movie("d","e","f")];
+
+        for( i =0;i<movies.length,i++){
+            document.write(movies[i].name, movies[i].hero, movies[i].director+"<br")
+        }             
+
+    </script>
+</body>
+</html>

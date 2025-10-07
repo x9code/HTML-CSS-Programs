@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function product(name, qty, unitPrice){
+            this.name = name;
+            this.qty = qty;
+            this.unitPrice = unitPrice;
+        }
+        product.prototype.discount = 10;
+        product.prototype.getAmount = function(){
+            return this.qty*this.unitPrice;
+        }
+        let p = new product("soa",2,50);
+        document.write(p.name+"<br>");
+        document.write(p.qty+"<br>");
+        document.write(p.unitPrice+"<br>");
+        document.write(p.getAmount()+"<br>");
+        document.write((p.getAmount()-p.discount)+"<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with List and Choices</title>
+</head>
+<body>
+    <h2>Sample Form</h2>
+    <form action="/submit_form" method="POST">
+        <label for="country">Choose your country:</label>
+        <select id="country" name="country">
+            <option value="india">India</option>
+            <option value="sri-lanka">Sri-lanka</option>
+            <option value="pakistan">Pakistan</option>
+            <option value="bangladesh">Bangladesh</option>
+        </select>
+        <br><br>
+        <p>Choose your preferred mode of contact:</p>
+        <input type="radio" id="email" name="contact" value="email">
+        <label for="email">Email</label><br>
+        <input type="radio" id="phone" name="contact" value="phone">
+        <label for="phone">Phone</label><br>
+        <input type="radio" id="mail" name="contact" value="mail">
+        <label for="mail">Mail</label><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

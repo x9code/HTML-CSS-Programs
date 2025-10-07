@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Average and Sum</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let sum = 0;
+
+        for(let i = 0; i < 5; i++){
+            arr[i] = parseInt(prompt("Enter mark " + (i + 1)));
+            
+        }
+        for(let i = 0; i<5;i++){
+            sum = sum + arr[i];
+        }
+        for(let i = 0; i<arr.length;i++){
+            document.write(arr[i]+"<br>");
+        }
+
+        let average = sum / arr.length;
+
+        document.write("Sum of marks: " + sum + "<br>");
+        document.write("Average of marks: " + average+"<br>");
+        let largest = arr[0];
+        let secondlarge = 0;
+        for(let i = 0;i<arr.length;i++){
+            if(arr[i]>largest){
+            largest = arr[i];
+            }
+        }
+        for(let i = 0;i<arr.length;i++){
+            if(arr[i]>secondlarge && arr[i] != largest){
+                secondlarge = arr[i];
+            }
+        }
+        document.write("biggest element "+ largest+"<br>" );
+        document.write("second largest mark "+ secondlarge);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!--Write a JavaScript code that displays text “TEXT-GROWING” with increasing font size in the 
+interval of 100ms in RED COLOR, when the font size reaches 50pt it displays “TEXT-SHRINKING” 
+in BLUE color. Then the font size decreases to 5pt-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Animation</title>
+<style>
+    #text {
+        color: red;
+        font-size: 1pt;
+    }
+</style>
+</head>
+<body>
+    <div id="text">TEXT-GROWING</div>
+
+    <script>
+        let fontSize = 1;
+        let growing = true;
+
+        const textElement = document.getElementById('text');
+
+        function animateText() {
+            if (growing) {
+                fontSize++;
+                textElement.style.fontSize = fontSize + 'pt';
+                if (fontSize >= 50) {
+                    growing = false;
+                    textElement.style.color = 'blue';
+                    textElement.textContent = 'TEXT-SHRINKING';
+                }
+            } else {
+                fontSize--;
+                textElement.style.fontSize = fontSize + 'pt';
+                if (fontSize <= 5) {
+                    clearInterval(interval);
+                }
+            }
+        }
+
+        const interval = setInterval(animateText, 100);
+    </script>
+</body>
+</html>

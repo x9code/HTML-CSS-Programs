@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stu1 = {
+            "id":1,
+            name : "Ram",
+            marks : 80,
+            "getResult":function(){
+                if(stu1.marks>40){
+                    return "pass";
+                }else{
+                document.write("fail");
+            }
+        }
+        };
+        var stu2 = {
+            "id":2,
+            name : "Sam",
+            marks : 90
+        };
+        document.write("id  "+stu1.id+"<br>");
+        document.write(stu1+"<br>");
+        stu1.mobno = 887823233;
+        document.write(stu1.mobno);
+        document.write(stu1.getResult());
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Functions</title>
+<script>
+    function findLeftMostVowelPosition(str) {
+        str = str.toLowerCase();
+        const vowels = ['a', 'e', 'i', 'o', 'u'];
+        for (let i = 0; i < str.length; i++) {
+            if (vowels.includes(str[i])) {
+                return i ;
+            }
+        }
+        return -1;
+    }
+
+    function reverseNumberDigits(num) {
+        let numStr = num.toString();
+        let reversedStr = numStr.split('').reverse().join('');
+        return parseInt(reversedStr);
+    }
+</script>
+</head>
+<body>
+    <h2>JavaScript Functions</h2>
+
+    <div>
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString">
+        <button onclick="findVowelPosition()">Find Left-Most Vowel Position</button>
+        <p id="vowelPositionResult"></p>
+    </div>
+
+    <div>
+        <label for="inputNumber">Enter a number:</label>
+        <input type="number" id="inputNumber">
+        <button onclick="reverseNumber()">Reverse Number Digits</button>
+        <p id="reversedNumberResult"></p>
+    </div>
+
+    <script>
+        function findVowelPosition() {
+            const inputString = document.getElementById('inputString').value;
+            const position = findLeftMostVowelPosition(inputString);
+            const resultElement = document.getElementById('vowelPositionResult');
+            if (position !== -1) {
+                resultElement.textContent = `Left-Most Vowel Position: ${position}`;
+            } else {
+                resultElement.textContent = "No vowels found in the string.";
+            }
+        }
+
+        function reverseNumber() {
+            const inputNumber = document.getElementById('inputNumber').value;
+            const reversedNumber = reverseNumberDigits(inputNumber);
+            const resultElement = document.getElementById('reversedNumberResult');
+            resultElement.textContent = `Reversed Number: ${reversedNumber}`;
+        }
+    </script>
+</body>
+</html>

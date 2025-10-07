@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Calculator</title>
+</head>
+<body>
+
+<h2>Number Calculator</h2>
+<input type="number" id="numberInput" oninput="calculate()">
+<p>Square: <span id="squareResult"></span></p>
+<p>Cube: <span id="cubeResult"></span></p>
+
+<script>
+function calculate() {
+  var number = document.getElementById("numberInput").value;
+  
+  if (!isNaN(number)) {
+    var square = number * number;
+    var cube = number * number * number;
+    
+    document.getElementById("squareResult").innerText = square;
+    document.getElementById("cubeResult").innerText = cube;
+  } else {
+    document.getElementById("squareResult").innerText = "";
+    document.getElementById("cubeResult").innerText = "";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Quote Generator</title>
+<script>
+const quotes = ["knowledge is power","health is wealth","time is money",
+];
+function displayRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById('quoteDisplay').textContent = quotes[randomIndex];
+}
+window.onload = displayRandomQuote;
+</script>
+</head>
+<body>
+<div id="quoteDisplay"></div> 
+</body>
+</html>

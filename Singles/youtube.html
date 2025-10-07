@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f00;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 2;
+            max-width: 800px;
+        }
+
+        .sidebar {
+            flex: 1;
+            max-width: 300px;
+            margin-left: 20px;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .video-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .video-description {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>YouTube</h1>
+    </header>
+    <nav>
+        <!-- Navigation links could be added here -->
+        Navigation Links
+    </nav>
+    <section>
+        <div class="main-content">
+            <!-- Featured Video -->
+            <h2>Featured Video</h2>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <!-- List of Videos -->
+            <h2>Latest Videos</h2>
+            <div class="video">
+                <img src="https://via.placeholder.com/300x150" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-info">
+                    <h3 class="video-title">Video Title 1</h3>
+                    <p class="video-description">Description of the video. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="video">
+                <img src="https://via.placeholder.com/300x150" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-info">
+                    <h3 class="video-title">Video Title 2</h3>
+                    <p class="video-description">Description of the video. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Add more videos as needed -->
+        </div>
+
+        <div class="sidebar">
+            <!-- Sidebar content, e.g., trending videos, channels, etc. -->
+            <h2>Trending Videos</h2>
+            <ul>
+                <li>Video 1</li>
+                <li>Video 2</li>
+                <li>Video 3</li>
+                <!-- Add more trending videos as needed -->
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <!-- Footer content, e.g., links, copyright information, etc. -->
+        &copy; 2023 YouTube. All rights reserved.
+    </footer>
+</body>
+
+</html>

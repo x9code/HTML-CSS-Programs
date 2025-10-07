@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="number" id="num" placeholder="Enter number"><br>
+    <input type="button" value = "add" onclick="add()"/>
+    <input type="button" value = "disp" onclick = "disp()"/>
+</form>
+    <script>
+         let arr = [];
+         let i = 0;
+         function add(){
+            arr[i] = parseInt(num.value);
+            i++;
+            num.value = "";
+         }
+         
+         function disp(){
+            for(let i = 0; i < arr.length; i++){
+                document.write("mark" +(i+1+"="+ (arr[i] + "<br>"));
+            }
+            sum();
+        }
+        function sum(){
+            var sum = 0;
+            for(var i = 0; i<arr.length; i++){
+                sum = sum + arr[i];
+            }
+        }
+        document.write("total marks :"+sum+"<br>");
+        document.write("average mark :"+ sum/arr.length+"<br>");
+    </script>
+</body>
+</html>

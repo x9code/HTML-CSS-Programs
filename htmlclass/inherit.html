@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Parent(name, rollno){
+           this.name = name;
+           this.rollno = rollno;
+           this.mark = 88;
+           this.getResult = function(){
+            if(this.mark > 40){
+                return "PASS";
+            }else{
+                return "Fail";
+            }
+           }
+        }
+        function Child(name, rollno, address){
+            Parent.call(this, "DEEPAK", 45);
+            this.address = address;
+        }
+        let a = new Child();
+        document.write(a.name+" - "+"Roll no - "+a.rollno+" - "+"MARK - "+a.mark+" - "+a.getResult());
+    </script>
+</body>
+</html>

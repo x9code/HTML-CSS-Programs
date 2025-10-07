@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+    <script>
+        function revno() {
+            let num = prompt("Enter a number to reverse:");
+            let reversed = num.split("").reverse().join("");
+            alert("Reversed number: " + reversed);
+        }
+
+        function perfectNumber() {
+            let num = parseInt(prompt("Enter a number to check if it's perfect:"));
+            let sum = 0;
+            for (let i = 1; i < num; i++) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+            }
+            if (sum === num) {
+                alert(num + " is a perfect number.");
+            } else {
+                alert(num + " is not a perfect number.");
+            }
+        }
+
+        function primeNumber() {
+            let num = parseInt(prompt("Enter a number to check if it's prime:"));
+            if (num <= 1) {
+                alert(num + " is not a prime number.");
+                return;
+            }
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    alert(num + " is not a prime number.");
+                    return;
+                }
+            }
+            alert(num + " is a prime number.");
+        }
+
+        function evenOdd() {
+            let num = parseInt(prompt("Enter a number to check if it's even or odd:"));
+            if (num % 2 === 0) {
+                alert(num + " is an even number.");
+            } else {
+                alert(num + " is an odd number.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Number Operations</h2>
+    <button onclick="revno()">Reverse Number</button>
+    <button onclick="perfectNumber()">Check Perfect Number</button>
+    <button onclick="primeNumber()">Check Prime Number</button>
+    <button onclick="evenOdd()">Check Even/Odd Number</button>
+</body>
+</html>

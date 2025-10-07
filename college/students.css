@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+students {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+student {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+student:last-child {
+    border-bottom: none;
+}
+
+student > * {
+    display: block;
+    margin: 5px 0;
+}
+
+usn, name, college, branch, yearOfJoining, email {
+    font-weight: bold;
+}
+
+usn::before, name::before, college::before, branch::before, yearOfJoining::before, email::before {
+    content: attr(data-label);
+    display: inline-block;
+    width: 150px;
+    font-weight: normal;
+    color: #555;
+}

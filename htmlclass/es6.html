@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            constructor(brand, model, year){
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+
+            }
+            displayDetails(){
+                return `Brand:${this.brand} || Model:${this.model} || Year:${this.year}`;
+            }
+        }
+        const myCar = new Car("BMW", "M3 Competition",1997);
+        document.write(myCar.displayDetails());
+    </script>
+</body>
+</html>

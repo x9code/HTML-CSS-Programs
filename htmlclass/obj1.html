@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(id,name,total){
+            this.id = id;
+            this.name = name;
+            this.total = total;
+            this.getResult = function(){
+                if(this.total>=90){
+                    return "Topper";
+                }else{
+                    return "Loser";
+                }
+            };
+        }
+        var stu = new Student(1,"Ram",99);
+        document.write("id    :"+stu.id+"<br>");
+        document.write("name  :"+stu.name+"<br>");
+        document.write("total :"+stu.total+"<br>");
+        document.write("result is :"+stu.getResult()+"<br>");
+    </script>
+</body>
+</html>
